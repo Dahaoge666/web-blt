@@ -5,7 +5,6 @@
   --text: #dbe7ff;
   --muted: #9cb0d3;
   --primary: #4da3ff;
-  --primary-strong: #2d82dd;
   --border: rgba(124, 159, 214, 0.25);
   font-family: "PingFang SC", "Microsoft YaHei", Inter, system-ui, -apple-system, sans-serif;
   line-height: 1.6;
@@ -119,9 +118,17 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.6rem, 3.3vw, 2.4rem);
+  font-size: clamp(1.4rem, 3vw, 2rem);
   line-height: 1.3;
   margin-bottom: 1rem;
+}
+
+.page-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.section {
+  padding: 4.2rem 0;
 }
 
 .hero p {
@@ -130,7 +137,7 @@ h2 {
 }
 
 .hero-actions {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
@@ -163,15 +170,17 @@ h2 {
   color: #fff;
 }
 
-.section {
-  padding: 4.6rem 0;
-}
-
 .split {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 1.2rem;
   align-items: start;
+}
+
+.detail-list {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
 }
 
 .stats {
@@ -181,7 +190,8 @@ h2 {
 }
 
 .stats article,
-.card {
+.card,
+.panel {
   background: linear-gradient(180deg, rgba(17, 28, 51, 0.9), rgba(13, 23, 43, 0.92));
   border: 1px solid var(--border);
   border-radius: 0.9rem;
@@ -197,6 +207,7 @@ h2 {
 .stats p,
 .card p,
 .timeline li,
+.panel p,
 .footer {
   color: var(--muted);
 }
@@ -213,13 +224,20 @@ h2 {
   gap: 1rem;
 }
 
-.card h3 {
+.card h3,
+.panel h2 {
   color: #fff;
+}
+
+.inline-link {
+  color: #9ec5ff;
+  text-decoration: none;
+  font-size: 0.92rem;
 }
 
 .timeline {
   list-style: none;
-  margin: 1.2rem 0 0;
+  margin: 1.2rem 0;
   padding: 0;
   display: grid;
   gap: 0.7rem;
@@ -246,19 +264,8 @@ h2 {
   font-weight: 700;
 }
 
-.cta-section {
-  padding-top: 1.8rem;
-}
-
-.cta-box {
-  border: 1px solid var(--border);
-  background: linear-gradient(135deg, rgba(18, 30, 54, 0.95), rgba(12, 24, 44, 0.93));
-  border-radius: 1rem;
-  padding: 1.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+.panel {
+  margin-bottom: 1rem;
 }
 
 .footer {
@@ -277,10 +284,5 @@ h2 {
 @media (max-width: 860px) {
   .split {
     grid-template-columns: 1fr;
-  }
-
-  .cta-box {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
