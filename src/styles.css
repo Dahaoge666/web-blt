@@ -1,0 +1,87 @@
+:root {
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0b3b66, #0c7cd5);
+  color: #fff;
+  padding: 6rem 0 5rem;
+}
+
+.eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin: 0 0 0.8rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+}
+
+.subtitle {
+  margin: 1rem 0 2rem;
+  font-size: 1.1rem;
+  max-width: 38rem;
+}
+
+.cta {
+  display: inline-block;
+  background: #fff;
+  color: #0b3b66;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.6rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section h2,
+.section h3 {
+  margin-top: 0;
+}
+
+.section-muted {
+  background: #eaf2fb;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.2rem;
+  border: 1px solid #dbe6f3;
+}
+
+.footer {
+  border-top: 1px solid #e2e8f0;
+  background: #fff;
+  padding: 1.2rem 0;
+  text-align: center;
+  color: #475569;
+}
